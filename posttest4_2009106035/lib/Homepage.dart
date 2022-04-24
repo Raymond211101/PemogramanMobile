@@ -86,7 +86,7 @@ class _ProfilePageState extends State<HomePAGE> {
                     margin: EdgeInsets.only(right: 10, top: 10),
                     decoration: BoxDecoration(
                       image: const DecorationImage(
-                          image: AssetImage('asset/CircleSubway.jpg')),
+                          image: AssetImage('asset/Python.png')),
                       border: Border.all(color: Colors.transparent),
                       shape: BoxShape.circle,
                     ),
