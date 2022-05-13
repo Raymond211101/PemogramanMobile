@@ -46,7 +46,7 @@ class _ProfilePageState extends State<HomePAGE> {
     return Scaffold(
         extendBodyBehindAppBar: true,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(130.0), // here the desired height
+          preferredSize: Size.fromHeight(110.0), // here the desired height
           child: AppBar(
               elevation: 0,
               flexibleSpace: Column(
