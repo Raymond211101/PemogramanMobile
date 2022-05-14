@@ -4,11 +4,22 @@ import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
 
 class DetailPage extends StatefulWidget {
-  const DetailPage({Key? key}) : super(key: key);
+  DetailPage({Key? key,required this.Detail}) : super(key: key);
+
+  List Detail = [
+    "", //Gambar
+    "", //Difficulty
+    "", //Waktu Yang Diperlukan 
+    "", // Deskripsi
+    "", //Take-Away Skill
+    "", //Judul
+  ];
 
   @override
   State<DetailPage> createState() => _DetailPageState();
 }
+
+
 
 class _DetailPageState extends State<DetailPage> {
   bool outline = true ;
@@ -21,7 +32,6 @@ class _DetailPageState extends State<DetailPage> {
 
   SnackBar bookmark(){
     return SnackBar(
-    shape: StadiumBorder(),
     behavior: SnackBarBehavior.floating,
     backgroundColor: Color(0xFFFFFFB72B),
     content: outline? Text('Bookmark Telah Dihapus!!')  : Text('Bookmark Telah Ditambahkan!!'),
@@ -137,7 +147,7 @@ class _DetailPageState extends State<DetailPage> {
             ),
             SizedBox(height: 28),
             Padding(
-              padding: const EdgeInsets.only(left: 25.0, right: 25.0),
+              padding:  EdgeInsets.only(left: 25.0, right: 25.0),
               child: Stack(
                 children: [
                   Container(
@@ -155,7 +165,7 @@ class _DetailPageState extends State<DetailPage> {
                       borderRadius: BorderRadius.circular(15),
                       child: ImageFiltered(
                         imageFilter: ImageFilter.blur(sigmaX: 0, sigmaY: 0),
-                        child: Image.asset('asset/PythonBG.jpg'),
+                        child: Image.asset(widget.Detail[0]),
                       ),
                     ),
                   ),
@@ -173,25 +183,25 @@ class _DetailPageState extends State<DetailPage> {
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Row(
-                        children: const [
+                        children: [
                           SizedBox(width: 20),
                           Text(
-                            'Pemula',
-                            style: TextStyle(
+                            widget.Detail[1],
+                            style: const TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 12 + 1,
                             ),
                           ),
-                          SizedBox(width: 10),
-                          Icon(
+                          const SizedBox(width: 10),
+                          const Icon(
                             Icons.brightness_1_rounded,
                             size: 10,
                             color: Colors.grey,
                           ),
-                          SizedBox(width: 10),
+                          const SizedBox(width: 10),
                           Text(
-                            "12 Pelajaran",
-                            style: TextStyle(
+                            widget.Detail[2],
+                            style: const TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 12 + 1,
                             ),
@@ -204,10 +214,10 @@ class _DetailPageState extends State<DetailPage> {
               ),
             ),
             SizedBox(height: 50),
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(left: 25),
               child: Text(
-                "Belajar Python 3",
+                widget.Detail[5],
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 24,
@@ -238,29 +248,29 @@ class _DetailPageState extends State<DetailPage> {
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        SizedBox(height: 20),
-                        Text(
+                      children: [
+                        const SizedBox(height: 20),
+                        const Text(
                           "Deskripsi",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 24,
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         Text(
-                            "Python adalah bahasa pemrograman serba guna dan populer. Python juga merupakan bahasa pertama yang bagus karena ringkas dan mudah dibaca. Bahasa yang baik untuk dimiliki di oleh programmer mana pun, Python dapat digunakan untuk segala hal mulai dari pengembangan web hingga pengembangan perangkat lunak"),
-                        SizedBox(height: 30),
-                        Text(
+                            widget.Detail[3]),
+                        const SizedBox(height: 30),
+                        const Text(
                           "Take - Away Skill",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 24,
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         Text(
-                            "Kursus ini merupakan pengantar yang bagus untuk konsep pemrograman dasar dan bahasa pemrograman Python. Python 3 adalah versi bahasa terbaru dengan banyak perbaikan yang dilakukan untuk meningkatkan efisiensi dan kesederhanaan kode Python yang Anda tulis.")
+                            widget.Detail[4])
                       ]),
                 ),
                 Padding(

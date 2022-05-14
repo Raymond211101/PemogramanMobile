@@ -18,6 +18,27 @@ TextEditingController SearchController = TextEditingController();
 final pagecontrol = PageController();
 
 
+//List DetailPageState
+
+List<String> Python = [
+'asset/PythonBG.jpg',
+'Pemula',
+"25 Jam",
+"Python adalah bahasa pemrograman serba guna dan populer. Python juga merupakan bahasa pertama yang bagus karena ringkas dan mudah dibaca. Bahasa yang baik untuk dimiliki di oleh programmer mana pun, Python dapat digunakan untuk segala hal mulai dari pengembangan web hingga pengembangan perangkat lunak",
+"Kursus ini merupakan pengantar yang bagus untuk konsep pemrograman dasar dan bahasa pemrograman Python. Python 3 adalah versi bahasa terbaru dengan banyak perbaikan yang dilakukan untuk meningkatkan efisiensi dan kesederhanaan kode Python yang Anda tulis.",
+"Belajar Python 3"
+];
+
+List<String> Html = [
+'asset/WebDev.jpeg',
+'Pemula',
+"9 Jam",
+"HTML adalah dasar dari semua halaman web. Tanpa HTML, Anda tidak akan dapat mengatur teks atau menambahkan gambar atau video ke halaman web Anda. HTML adalah awal dari semua yang perlu Anda ketahui untuk membuat halaman web yang menarik!",
+"Anda akan mempelajari semua tag HTML umum yang digunakan untuk menyusun halaman HTML, kerangka semua situs web. Anda juga akan dapat membuat tabel HTML untuk menyajikan data tabular secara efisien.",
+"Dasar HTML 5"
+];
+
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -142,7 +163,7 @@ class _HomeState extends State<Home> {
                 onTap: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (BuildContext context) {
-                    return DetailPage();
+                    return DetailPage(Detail: Python,);
                   }));
                 },
                 child: FeaturedCourse(
@@ -152,11 +173,19 @@ class _HomeState extends State<Home> {
                   waktu: '25',
                 ),
               ),
-              FeaturedCourse(
-                gambar: 'asset/WebDev.jpeg',
-                judul: 'HTML',
-                pelajaran: '6',
-                waktu: '9',
+              InkWell(
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (BuildContext context) {
+                    return DetailPage(Detail: Html,);
+                  }));
+                },
+                child: FeaturedCourse(
+                  gambar: 'asset/WebDev.jpeg',
+                  judul: 'HTML',
+                  pelajaran: '6',
+                  waktu: '9',
+                ),
               ),
               FeaturedCourse(
                 gambar: 'asset/apple-swift.jpg',

@@ -101,7 +101,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    Text("Bookmark",
+                    Text("Mengikuti",
                         style: TextStyle(color: Colors.white, fontSize: 17)),
                     SizedBox(height: 5),
                     Text("0",
@@ -109,8 +109,8 @@ class _ProfilePageState extends State<ProfilePage> {
                             color: Colors.white,
                             fontSize: 26,
                             fontWeight: FontWeight.bold)),
-                    Text("Kelas",
-                        style: TextStyle(color: Colors.white, fontSize: 26))
+                    Text("Challange",
+                        style: TextStyle(color: Colors.white, fontSize: 24))
                   ],
                 ),
               ),

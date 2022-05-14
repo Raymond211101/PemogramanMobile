@@ -102,7 +102,6 @@ class _FeaturedCourseState extends State<FeaturedCourse> {
   Future<bool> onLikeButtonTapped(bool isLiked) async{
     ScaffoldMessenger.of(context)..removeCurrentSnackBar()..showSnackBar(
       SnackBar(
-    shape: StadiumBorder(),
     duration: Duration(seconds: 2),
     behavior: SnackBarBehavior.floating,
     backgroundColor: Color(0xFFFFFFB72B),
