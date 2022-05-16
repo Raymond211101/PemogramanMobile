@@ -39,6 +39,7 @@ class _DetailPageState extends State<DetailPage> {
     action: SnackBarAction(
       label: 'Dismiss',
       onPressed: () {
+        ScaffoldMessenger.of(context)..removeCurrentSnackBar();
       },
     ),
   );
