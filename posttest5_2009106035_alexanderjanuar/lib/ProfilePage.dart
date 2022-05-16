@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'EditProfile.dart';
 
 DateTime datetime = DateTime.now();
 String formatter = DateFormat.yMMMMd('en_US').format(datetime);
@@ -171,7 +172,7 @@ class _ProfilePageState extends State<ProfilePage> {
         ProfileForm("AlexanderDienc@gmail.com", Icon(Icons.email_outlined),
             "Alamat Email"),
         ProfileForm(DateFormat.yMMMMd('en_US').format(datetime),
-            Icon(Icons.timelapse_outlined), "Tanggal Lahir"),
+            Icon(Icons.calendar_today), "Tanggal Lahir"),
         SizedBox(height: 20),
         Container(
             height: 40,
@@ -182,8 +183,10 @@ class _ProfilePageState extends State<ProfilePage> {
                   elevation: 5.0,
 ),
               onPressed: () {
-                setState(() {
-                });
+                Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (BuildContext context) {
+                    return EditProfile();
+                  }));
               },
               child: Text("Edit Profile"),
             ),

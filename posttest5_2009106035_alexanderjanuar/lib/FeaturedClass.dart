@@ -19,6 +19,9 @@ class FeaturedCourse extends StatefulWidget {
   State<FeaturedCourse> createState() => _FeaturedCourseState();
 }
 
+
+
+
 class _FeaturedCourseState extends State<FeaturedCourse> {
   bool isFeatured = false;
 
@@ -99,6 +102,8 @@ class _FeaturedCourseState extends State<FeaturedCourse> {
       ),
     );
   }
+
+
   Future<bool> onLikeButtonTapped(bool isLiked) async{
     ScaffoldMessenger.of(context)..removeCurrentSnackBar()..showSnackBar(
       SnackBar(

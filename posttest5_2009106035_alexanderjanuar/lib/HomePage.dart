@@ -5,6 +5,7 @@ import 'package:circle_nav_bar/circle_nav_bar.dart';
 import 'Catalog.dart';
 import 'DetailPage.dart';
 import 'ProfilePage.dart';
+import 'FormPage.dart';
 
 //Global Variabel
 DateTime now = DateTime.now();
@@ -12,7 +13,7 @@ final Waktu = DateTime.parse(now.toString());
 
 int _currentIndex = 0;
 
-List<Widget> widgets = const [Home(), Catalog(),ProfilePage(),];
+List<Widget> widgets = const [Home(), Catalog(),PageForm(),ProfilePage()];
 
 TextEditingController SearchController = TextEditingController();
 final pagecontrol = PageController();
@@ -62,11 +63,13 @@ class _HomePageState extends State<HomePage> {
         activeIcons: const [
           Icon(Icons.home, color: Colors.white),
           Icon(Icons.list_alt_outlined, color: Colors.white),
+          Icon(Icons.search_outlined, color: Colors.white),
           Icon(Icons.person, color: Colors.white),
         ],
         inactiveIcons: const [
           Text("Home", style: TextStyle(color: Colors.white)),
           Text("Catalog", style: TextStyle(color: Colors.white)),
+          Text("Search", style: TextStyle(color: Colors.white)),
           Text("Profile", style: TextStyle(color: Colors.white),),
         ],
         gradient: const LinearGradient(
