@@ -37,7 +37,7 @@ class _ProfilePageState extends State<ProfilePage> {
               width: 10,
             ),
             Text(name,
-                style: TextStyle(fontWeight: FontWeight.w400, fontSize: 18)),
+                style: TextStyle(fontWeight: FontWeight.w200, fontSize: 16)),
           ]),
         )
       ],

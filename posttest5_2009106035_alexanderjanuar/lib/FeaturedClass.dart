@@ -92,7 +92,6 @@ class _FeaturedCourseState extends State<FeaturedCourse> {
                 ),
                 const SizedBox(width: 70),
                 LikeButton(
-                  onTap: onLikeButtonTapped,
                   likeBuilder: (isTapped) {},
                 )
               ],

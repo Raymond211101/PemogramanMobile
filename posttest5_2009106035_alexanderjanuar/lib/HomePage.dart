@@ -107,11 +107,11 @@ class _HomeState extends State<Home> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    Waktu.hour > 5 && Waktu.hour < 11
+                    Waktu.hour >= 5 && Waktu.hour < 11
                         ? "Selamat Pagi"
-                        : Waktu.hour > 11 && Waktu.hour < 15
+                        : Waktu.hour >= 11 && Waktu.hour < 15
                             ? "Selamat Siang"
-                            : Waktu.hour > 15 && Waktu.hour < 19
+                            : Waktu.hour >= 15 && Waktu.hour < 19
                                 ? "Selamat Sore"
                                 : "Selamat Malam",
                     style: const TextStyle(
